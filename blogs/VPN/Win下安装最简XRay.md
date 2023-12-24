@@ -1,3 +1,15 @@
++++
+date = 2017-12-23
+title = 'Win 下安装最简 XRay'
+categories = ['server']
+tags = [
+    "server",
+    "VPN",
+    "v2ray",
+]
++++
+
+
 # Win下安装最简XRay
 
 ### 下载最新的xray-core
@@ -23,7 +35,7 @@
       "settings": {
         "clients": [
           {
-            "id": "c53376d6-436f-45b4-82b4-82cfa8f22eaa"
+            "id": "xxxxx-xxxxx-xxxxx-xxxxx-xxxxx"
           }
         ]
       }

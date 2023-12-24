@@ -1,4 +1,15 @@
-# 用docker给Linux安装v2ray客户端
++++
+date = 2017-04-28
+title = '用 Docker 给 Linux 安装 v2ray 客户端'
+categories = ['server']
+tags = [
+    "server",
+    "VPN",
+    "v2ray",
+]
++++
+
+# 
 
 ## 更新镜像
 ```bash
@@ -49,11 +60,11 @@ vim /etc/v2/config.json
         "wsSettings": {
           "path": "/mysql",
           "headers": {
-            "host": "cdn.bestprompt.cc"
+            "host": "cdn.xxxx.com"
           }
         },
         "tlsSettings": {
-          "serverName": "cdn.bestprompt.cc",
+          "serverName": "cdn.xxxx.com",
           "allowInsecure": false
         },
         "security": "tls",
@@ -63,10 +74,10 @@ vim /etc/v2/config.json
       "settings": {
         "vnext": [
           {
-            "address": "cdn.bestprompt.cc",
+            "address": "cdn.xxxx.com",
             "users": [
               {
-                "id": "441c2c8c-481c-471f-9dec-086ef80cf01e",
+                "id": "xxxxx-xxxxx-xxxxx-xxxxx-xxxxx",
                 "alterId": 0,
                 "level": 0,
                 "security": "aes-128-gcm"
@@ -145,11 +156,7 @@ help run
 export http_proxy=http://127.0.0.1:1087
 export https_proxy=http://127.0.0.1:1087
 
-export http_proxy=http://172.17.0.1:1087
-export https_proxy=http://172.17.0.1:1087
-
-
-
+# 取消环境变量
 export http_proxy=
 export https_proxy=
 ```

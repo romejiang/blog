@@ -1,16 +1,27 @@
-# SmartDNS和v2ray配置
++++
+date = 2017-11-03
+title = 'SmartDNS 和 v2ray 配置'
+categories = ['server']
+tags = [
+    "server",
+    "VPN",
+    "v2ray",
+]
++++
+
 
 **在 HAProxy 配置文件中开启 Runtime API**
 
+```bash
 global
     stats socket ipv4@127.0.0.1:9999 level admin
     stats socket /var/run/hapee-lb.sock mode 666 level admin
+```
 
 **动态调整权重**
-
+```bash
 echo "show stat" | socat stdio /var/etc/passwall/pid/haproxy.sock | cut -d "," -f 1-2,18-19
-
-echo "set server passwall/hk.nbhd.cloud:443 weight 6" | socat stdio /var/etc/passwall/pid/haproxy.sock
+```
 
 [https://www.haproxy.com/blog/dynamic-configuration-haproxy-runtime-api/](https://www.haproxy.com/blog/dynamic-configuration-haproxy-runtime-api/)
 
@@ -30,12 +41,14 @@ arm_64bit=1
 
 启动树莓派，获取ip，配置dns，配置好网络
 
+```bash
 opkg update
 
 opkg install luci
+```
 
 tls v2ray 配置
-
+```json
 {
   "log": {
     "access": "/var/log/v2ray/access.log",
@@ -55,7 +68,7 @@ tls v2ray 配置
       "settings": {
         "clients": [
           {
-            "id": "9ddef833-86d1-4c8b-9752-53f6c5c25e2c",
+            "id": "xxxxxx-xxxxxx-xxxxxx-xxxxxx-xxxxxx",
             "alterId": 64
           }
         ]
@@ -65,7 +78,7 @@ tls v2ray 配置
         "network": "ws",
         "security": "none",
         "wsSettings": {
-          "path": "/webex"
+          "path": "/xxxxxx"
         }
       },
       "listen": "127.0.0.1"
@@ -109,3 +122,5 @@ tls v2ray 配置
 
   }
 }
+
+```

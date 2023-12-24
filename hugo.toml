@@ -4,6 +4,10 @@ title = "Rome Jiang's Blog"
 theme = 'yinyang'
 DefaultContentLanguage = "zh"
 
+[author]
+  
+  link = "https://romejiang.top"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -18,9 +22,11 @@ twitterCards = true
 postHeaderContent = ""
 postFooterContent = "<br/><br/><p>Subscribe：<a target='_blank' href='https://mailchi.mp/a1a0d59e7a19/joway'>Romejiang's Blog</a></p>"
 
-authorName = "Romejiang"
+author.name = "romejiang"
+author.email = "Romejiang@gmail.com"
 homepage = "https://romejiang.top/"
 extraCSSFiles = ["index.css"]
+
 
 [[params.socials]]
 name = "About Me"
@@ -35,10 +41,8 @@ link = "https://github.com/romejiang"
     excludeFiles = [
       'AIGC/*',
       'Blockchain/*',
-      'VPN/*',
       'Code Snippets/*',
       'DevOps/*',
-      '兴趣/*',
     ]
     source = 'blogs'
     target = 'content/posts'

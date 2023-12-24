@@ -1,12 +1,20 @@
-# 部署新的V2Ray服务器
++++
+date = 2016-03-15
+title = '部署V2Ray服务器'
+categories = ['server']
+tags = [
+    "server",
+    "VPN",
+    "GFW",
+    "v2ray",
+]
++++
 
-[https://github.com/mack-a/v2ray-agent](https://github.com/mack-a/v2ray-agent#1vlesstcptlsvlesswstlsvmesstcptlsvmesswstlstrojan-%E4%BC%AA%E8%A3%85%E7%AB%99%E7%82%B9-%E4%BA%94%E5%90%88%E4%B8%80%E5%85%B1%E5%AD%98%E8%84%9A%E6%9C%AC)
 
-66.112.213.93 bwg 
+一键安装包
 
-NUZXRGtF39LQ
+[https://github.com/mack-a/v2ray-agent](https://github.com/mack-a/v2ray-agent)
 
-解析域名
 
 ```bash
 wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
