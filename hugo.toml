@@ -1,0 +1,44 @@
+baseURL = 'https://romejiang.top/'
+languageCode = 'zh-cn'
+title = 'Rome Jiang's Blog'
+theme = 'yinyang'
+DefaultContentLanguage = "zh"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    tabWidth = 2
+
+[params]
+headTitle = "Rome Jiang's Blog"
+mainSections = ["posts"]
+twitterCards = true
+postHeaderContent = ""
+postFooterContent = "<br/><br/><p>Subscribe：<a target='_blank' href='https://mailchi.mp/a1a0d59e7a19/joway'>Romejiang's Blog</a></p>"
+
+authorName = "Romejiang"
+homepage = "https://romejiang.top/"
+extraCSSFiles = ["assets/index.css"]
+
+[[params.socials]]
+name = "About Me"
+link = "/about"
+[[params.socials]]
+name = "Github"
+link = "https://github.com/romejiang"
+
+
+[module]
+[[module.mounts]]
+    excludeFiles = [
+      'AIGC/*',
+      'Blockchain/*',
+      'VPN/*',
+      'Code Snippets/*',
+      'DevOps/*',
+      '兴趣/*',
+    ]
+    source = 'blogs'
+    target = 'content/posts'

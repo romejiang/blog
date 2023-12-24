@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  border: 18px solid #7b16ff;
+}
+
+.site-date-catalog {
+  color: #7b16ff;
+}
