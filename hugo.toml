@@ -20,7 +20,7 @@ postFooterContent = "<br/><br/><p>Subscribe：<a target='_blank' href='https://m
 
 authorName = "Romejiang"
 homepage = "https://romejiang.top/"
-extraCSSFiles = ["assets/index.css"]
+extraCSSFiles = ["index.css"]
 
 [[params.socials]]
 name = "About Me"
