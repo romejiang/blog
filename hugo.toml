@@ -1,6 +1,6 @@
 baseURL = 'https://romejiang.top/'
 languageCode = 'zh-cn'
-title = 'Rome Jiang's Blog'
+title = "Rome Jiang's Blog"
 theme = 'yinyang'
 DefaultContentLanguage = "zh"
 
