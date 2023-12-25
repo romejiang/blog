@@ -1,4 +1,13 @@
-# Redis 常用命令
++++
+date = 2016-11-19
+title = 'Redis 常用命令'
+categories = ['coding']
+tags = [
+    "coding",
+    "redis",
+]
++++
+
 
 ### 认证
 ```shell

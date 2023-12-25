@@ -1,4 +1,13 @@
-# Node其他
++++
+date = 2017-03-12
+title = 'nodejs 一些常用的 snippets'
+categories = ['coding']
+tags = [
+    "coding",
+    "nodejs",
+]
++++
+
 
 
 ## 遍历 times 

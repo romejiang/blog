@@ -1,4 +1,13 @@
-# Node日期相关的
++++
+date = 2015-03-16
+title = 'Node日期相关操作'
+categories = ['coding']
+tags = [
+    "coding",
+    "nodejs",
+]
++++
+
 
 ```jsx
 // console.log('昨天' , (addDate(-1)+' 00:00:00') , addDate(-1)+' 23:59:59')

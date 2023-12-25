@@ -1,4 +1,13 @@
-# mongo 相关的
++++
+date = 2020-08-08
+title = 'mongo 聚合查询'
+categories = ['coding']
+tags = [
+    "coding",
+    "mongodb",
+]
++++
+
 
 ## 聚合查询
 

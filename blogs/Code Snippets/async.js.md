@@ -1,4 +1,14 @@
-# async.js 库的使用
++++
+date = 2019-02-23
+title = 'async.js 库的使用'
+categories = ['coding']
+tags = [
+    "coding",
+    "nodejs",
+    "dev",
+]
++++
+
 
 async.js 库分为两大类方法，Collections 和 Control Flow。在整个async语境里 series 代表串行执行。Limit 代表并行执行中控制并行数量。
 

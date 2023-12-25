@@ -1,4 +1,14 @@
-# Python 相关的命令
++++
+date = 2018-09-28
+title = 'Python 创建环境'
+categories = ['coding']
+tags = [
+    "coding",
+    "python",
+]
++++
+
+# 
 
 ### 使用venv创建环境
 

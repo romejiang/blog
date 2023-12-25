@@ -1,4 +1,15 @@
-# uniapp + ts + vue3 + windicss
++++
+date = 2022-11-19
+title = '搭建 uniapp + ts + vue3 + windicss 项目'
+categories = ['coding']
+tags = [
+    "coding",
+    "vuejs",
+    "ts",
+    "windicss",
+]
++++
+
 
 
 ## 新组合 uniapp + ts + vue3 + unocss + mini-router
