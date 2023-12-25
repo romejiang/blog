@@ -27,10 +27,12 @@ author.email = "Romejiang@gmail.com"
 homepage = "https://romejiang.top/"
 extraCSSFiles = ["index.css"]
 
-
 [[params.socials]]
 name = "About Me"
 link = "/about"
+[[params.socials]]
+name = "Tags"
+link = "/categories/"
 [[params.socials]]
 name = "Github"
 link = "https://github.com/romejiang"
