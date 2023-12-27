@@ -1,6 +1,19 @@
-# 安装软路由 PVE + OPENWRT + NAS
++++
+date = 2020-04-19
+title = '安装软路由 PVE + OPENWRT + NAS(黑群晖)'
+categories = ['devops']
+tags = [
+    "devops",
+    "nas",
+    "pve",
+    "openwrt",
+    "v2ray",
+]
++++
+
 
 ## 使用引导安装群晖 7.2
+
 https://www.mspace.cc/archives/834
 
 https://www.123pan.com/s/9YDcVv-ldLN3.html
@@ -42,7 +55,7 @@ https://www.123pan.com/s/9YDcVv-ldLN3.html
 
 **注意：还有可能chrome浏览器登录会报错，可以尝试换safari或者edge浏览器。**
 
-![%E5%AE%89%E8%A3%85%E8%BD%AF%E8%B7%AF%E7%94%B1%20PVE%20+%20OPENWRT%20+%20NAS%2040876451732c4fb88399b9bc087a3f9c/Untitled.png](%E5%AE%89%E8%A3%85%E8%BD%AF%E8%B7%AF%E7%94%B1%20PVE%20+%20OPENWRT%20+%20NAS%2040876451732c4fb88399b9bc087a3f9c/Untitled.png)
+![/pve/Untitled.png](/pve/Untitled.png)
 
 打开管理后台大概这个样子。左边的数据中心和pve节点就是本机硬件的管理。下面的都是虚拟机。在pve节点，点右键，可以创建虚拟机。
 
@@ -151,7 +164,7 @@ PVE中virtio网卡使用方法：
 
 安装完成后，先关机，网卡切换成virtio，再开机即可
 
-![%E5%AE%89%E8%A3%85%E8%BD%AF%E8%B7%AF%E7%94%B1%20PVE%20+%20OPENWRT%20+%20NAS%2040876451732c4fb88399b9bc087a3f9c/Untitled%201.png](%E5%AE%89%E8%A3%85%E8%BD%AF%E8%B7%AF%E7%94%B1%20PVE%20+%20OPENWRT%20+%20NAS%2040876451732c4fb88399b9bc087a3f9c/Untitled%201.png)
+![/pve/Untitled%201.png](/pve/Untitled%201.png)
 
 ### 在PVE中连接黑群晖的命令行（console）
 

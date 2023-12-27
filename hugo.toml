@@ -14,6 +14,9 @@ DefaultContentLanguage = "zh"
       unsafe = true
   [markup.highlight]
     tabWidth = 2
+    codeFences = true
+    guessSyntax = true
+    
 
 [params]
 headTitle = "Rome Jiang's Blog"
@@ -25,7 +28,7 @@ postFooterContent = "<br/><br/><p>Subscribe：<a target='_blank' href='https://m
 author.name = "romejiang"
 author.email = "Romejiang@gmail.com"
 homepage = "https://romejiang.top/"
-extraCSSFiles = ["index.css"]
+extraCSSFiles = ["css/index.css","css/syntax.css"]
 
 [[params.socials]]
 name = "About Me"
@@ -42,7 +45,6 @@ link = "https://github.com/romejiang"
 [[module.mounts]]
     excludeFiles = [
       'Blockchain/*',
-      'DevOps/*',
     ]
     source = 'blogs'
     target = 'content/posts'

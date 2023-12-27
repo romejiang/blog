@@ -1,3 +1,17 @@
++++
+date = 2020-04-19
+title = '安装软路由 PVE + OPENWRT + NAS(黑群晖)'
+categories = ['devops']
+tags = [
+    "devops",
+    "nas",
+    "pve",
+    "openwrt",
+    "v2ray",
+]
++++
+
+
 # cordova 
 
 2023-11-15 最新情况

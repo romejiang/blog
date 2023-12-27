@@ -1,4 +1,12 @@
-# 安装OpenVPN AS服务器
++++
+date = 2020-09-06
+title = '安装OpenVPN AS服务器'
+categories = ['devops']
+tags = [
+    "devops",
+    "openvpn",
+]
++++
 
 ### **参考官方安装文档**
 
