@@ -4,8 +4,9 @@ title = "Rome Jiang's Blog"
 theme = 'yinyang'
 DefaultContentLanguage = "zh"
 
+googleAnalytics = "G-QYWXZN3NBX"
+
 [author]
-  
   link = "https://romejiang.top"
 
 [markup]
@@ -28,7 +29,7 @@ postFooterContent = "<br/><br/><p>Subscribe：<a target='_blank' href='https://m
 author.name = "romejiang"
 author.email = "Romejiang@gmail.com"
 homepage = "https://romejiang.top/"
-extraCSSFiles = ["css/index.css","css/syntax.css"]
+extraCSSFiles = ["css/index.css"]
 
 [[params.socials]]
 name = "About Me"
