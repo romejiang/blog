@@ -17,6 +17,7 @@ googleAnalytics = "G-QYWXZN3NBX"
     tabWidth = 2
     codeFences = true
     guessSyntax = true
+    noclasses = false
     
 
 [params]
@@ -29,7 +30,7 @@ postFooterContent = "<br/><br/><p>Subscribe：<a target='_blank' href='https://m
 author.name = "romejiang"
 author.email = "Romejiang@gmail.com"
 homepage = "https://romejiang.top/"
-extraCSSFiles = ["css/index.css"]
+extraCSSFiles = ["css/index.css", "css/syntax-dark.css"]
 
 [[params.socials]]
 name = "About Me"
