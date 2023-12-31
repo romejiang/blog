@@ -1,3 +1,16 @@
++++
+date = 2019-12-28
+title = 'BTCPay Server 安装配置'
+publishDate = '2050-01-01'
+categories = ['devops']
+tags = [
+    "devops",
+    "BTC",
+    "open source",
+    "server",
+]
++++
+
 # Mongodb基于docker的集群和管理
 
 **初始化环境**

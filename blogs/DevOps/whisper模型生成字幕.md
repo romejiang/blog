@@ -1,3 +1,18 @@
++++
+date = 2019-12-28
+title = 'BTCPay Server 安装配置'
+publishDate = '2050-01-01'
+categories = ['devops']
+tags = [
+    "devops",
+    "BTC",
+    "open source",
+    "server",
+]
++++
+
+
+
 # 通过 openai whisper 模型生成字幕
 
 ```shell

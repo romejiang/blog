@@ -1,3 +1,16 @@
++++
+date = 2019-12-28
+title = 'BTCPay Server 安装配置'
+publishDate = '2050-01-01'
+categories = ['devops']
+tags = [
+    "devops",
+    "BTC",
+    "open source",
+    "server",
+]
++++
+
 # Docker Swarm集群部署
 
 **创建Swarm**

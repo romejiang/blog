@@ -1,3 +1,16 @@
++++
+date = 2019-12-28
+title = 'BTCPay Server 安装配置'
+publishDate = '2050-01-01'
+categories = ['devops']
+tags = [
+    "devops",
+    "BTC",
+    "open source",
+    "server",
+]
++++
+
 # Nginx和ACME做自动ssl代理，基于Docker
 
 ### 关键技术

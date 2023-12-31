@@ -1,3 +1,16 @@
++++
+date = 2019-12-28
+title = 'BTCPay Server 安装配置'
+publishDate = '2050-01-01'
+categories = ['devops']
+tags = [
+    "devops",
+    "BTC",
+    "open source",
+    "server",
+]
++++
+
 # /etc/nsmb.conf - macOS 11.3 - 2021-04-29
 #------------------------------------------------------------------------------
 # SMB configuration for macOS 11.3 <-> Synology
