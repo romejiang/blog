@@ -1,9 +1,23 @@
-# BTCPay Server 安装配置
++++
+date = 2019-12-28
+title = 'BTCPay Server 安装配置'
+categories = ['devops']
+tags = [
+    "devops",
+    "BTC",
+    "open source",
+    "server",
+]
++++
+
 
 # Login as root
-sudo su -
+
+`sudo -i`
 
 # Create a folder for BTCPay
+
+```bash
 mkdir BTCPayServer
 cd BTCPayServer
 
@@ -29,6 +43,9 @@ export BTCPAY_ENABLE_SSH=true
 
 exit
 
+
+```
+
 [https://docs.btcpayserver.org/Docker/](https://docs.btcpayserver.org/Docker/)
 
 [https://docs.btcpayserver.org/FAQ/FAQ-Deployment/](https://docs.btcpayserver.org/FAQ/FAQ-Deployment/)
@@ -37,18 +54,12 @@ exit
 
 [http://blog.hubwiz.com/2019/05/23/bitcoin-btcpayserver/](http://blog.hubwiz.com/2019/05/23/bitcoin-btcpayserver/)
 
-大神们，你们好，我想将btcpay和我的论坛系统nodebb整合，让每一个用户都有一个商店和钱包，这样他们就可以用论坛发布帖子并通过btcpay收款。
-
-开始一切都顺利，我通过api可以创建账号和商店，但我无法通过api绑定钱包和创建钱包。这个问题谁有办法或者解决方案？谢谢大家
-
-Hi , guys , I want to integrate BTCPay with my forum system nodebb so that every user has a store and wallet so that they can post on the forum and collect money through BTCPay .
-
-All went well at first , I could create an account and store through the API , but I couldn't setup a wallet or generate a hot wallet through the API . Who has a solution or a solution to this problem ? Thank you for your attention .
 
 /stores/9JSXirghrYL4ic8VAeKjrK6yWgMQ92V3ectzyx1WempA/derivations/BTC/generatenbxwallet
 
 [https://pay.pocplus.com/stores/9JSXirghrYL4ic8VAeKjrK6yWgMQ92V3ectzyx1WempA/derivations/BTC/generatenbxwallet](https://pay.pocplus.com/stores/9JSXirghrYL4ic8VAeKjrK6yWgMQ92V3ectzyx1WempA/derivations/BTC/generatenbxwallet)
 
+```
 1. ExistingMnemonic: 
 2. Passphrase: 
 3. passphrase_conf: 
@@ -99,6 +110,7 @@ true
 
 /stores/9JSXirghrYL4ic8VAeKjrK6yWgMQ92V3ectzyx1WempA
 
+```
 [https://pay.pocplus.com/stores/9JSXirghrYL4ic8VAeKjrK6yWgMQ92V3ectzyx1WempA](https://pay.pocplus.com/stores/9JSXirghrYL4ic8VAeKjrK6yWgMQ92V3ectzyx1WempA)?
 
 创建钱包的页面
@@ -113,6 +125,7 @@ true
 
 http://127.0.0.1:14142/stores/7GYbjwXzc7AwvcRFHXzew3RDhCHRbrRDKaijysmbuxNZ/onchain/BTC/generate/HotWallet
 
+```
 - ScriptPubKeyType:
 - Segwit
 - SavePrivateKeys:
@@ -122,4 +135,8 @@ http://127.0.0.1:14142/stores/7GYbjwXzc7AwvcRFHXzew3RDhCHRbrRDKaijysmbuxNZ/oncha
 - __RequestVerificationToken:
 - CfDJ8Bi74VC_UCtFq5izs_lWsqOUsSYj-6SZ5MaGPlMhoQ1AedWAGaL2ADEwq41HFNsyaJ5lQ6j581b2lcR4xeNr4-Aoksho4hB2p9iBvtctVRBqLg9A7P_1INWFljwywGf2vOPkD8kkDE4IuriaOJ1_3DapRBSWggCzekeQGD7vNZrUI4_MFd5gCJk9UV14C5fGPg
 - ImportKeysToRPC:
+
 - false
+
+
+```

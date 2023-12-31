@@ -1,13 +1,13 @@
 +++
-date = 2020-04-19
-title = '安装软路由 PVE + OPENWRT + NAS(黑群晖)'
-categories = ['devops']
+date = 2015-07-19
+title = '创建 cordova 插件'
+categories = ['coding']
 tags = [
-    "devops",
-    "nas",
-    "pve",
-    "openwrt",
-    "v2ray",
+    "coding",
+    "cordova",
+    "plugin",
+    "phone",
+    "mobile",
 ]
 +++
 

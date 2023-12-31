@@ -10,6 +10,20 @@ tags = [
 
 # Linux 常用命令
 
+
+
+** 安装 z jump **
+
+
+```bash
+wget https://raw.githubusercontent.com/rupa/z/master/z.sh
+
+printf "\n\n#initialize Z (https://github.com/rupa/z) \n. ~/z.sh \n\n" >> .bashrc
+
+source ~/.bashrc
+
+```
+
 **screen常用方法**
 
 ```bash

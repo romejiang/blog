@@ -1,3 +1,16 @@
++++
+date = 2016-07-30
+title = '用 Google 自动翻译 PO 文件'
+categories = ['coding']
+tags = [
+    "coding",
+    "google",
+    "PO",
+]
++++
+  
+  
+> PO file - A gettext localization file format
 
 ```shell
 
@@ -20,6 +33,10 @@ npx po-csv file.po translated.csv > translated.po
 mv translated.po file.po
 ```
 
+PS:
 
 https://github.com/marek-saji/po-csv
+
 https://github.com/naskio/po-auto-translation
+
+

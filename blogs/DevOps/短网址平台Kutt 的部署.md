@@ -1,4 +1,15 @@
-# 短网址平台Kutt 的部署
++++
+date = 2015-11-20
+title = '短网址平台 Kutt 的部署'
+categories = ['devops']
+tags = [
+    "devops",
+    "docker",
+    "open source",
+]
++++
+
+
 
 ### 安装docker 和 docker-compose
 
