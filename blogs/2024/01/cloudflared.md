@@ -45,6 +45,8 @@ tree
 vim config.yml
 
 tunnel: xxxxxxx-1aa2-46fe-a4ef-5d6ba1b946c8
+credentials-file: /etc/cloudflared/415c7dbd-1aa2-46fe-a4ef-5d6ba1b946c8.json
+
 ingress:
   - hostname: www.mywebsite.com
     service: http://192.168.1.100:8080
@@ -54,10 +56,25 @@ ingress:
 
 ```
 
-### 启动 docker 容器。
+### 分配一个 CNAME 记录，将流量指向您的 Tunnel。
 
 ```shell
+# 创建子域名记录，如果有多个子域名，要执行多次。
+docker run -v $PWD/cloudflared:/etc/cloudflared erisamoe/cloudflared tunnel route dns xxxxxx-1aa2-46fe-a4ef-5d6ba1b946c8 nas.mywebsite.com
+# 验证记录
+docker run -v $PWD/cloudflared:/etc/cloudflared erisamoe/cloudflared tunnel ingress validate
+# 验证访问规则
+docker run -v $PWD/cloudflared:/etc/cloudflared erisamoe/cloudflared tunnel ingress rule https://nas.mywebsite.com
+
+```
+
+### 启动 docker 容器。启动后需要等一会才能联通。看到这样的日志就代表联通了。`Registered tunnel connection connIndex=0 connection=xxxxxx-f4e9-4d5e-bb34-323ea53420ee event=0 ip=28.0.11.157 location=kix02 protocol=http2`
+
+```shell
+# 测试启动
 docker run -v $PWD/cloudflared:/etc/cloudflared erisamoe/cloudflared tunnel run mytunnel
+# 正式启动
+docker run -d --restart unless-stopped -v $PWD/cloudflared:/etc/cloudflared erisamoe/cloudflared tunnel run mytunnel
 ```
 
 ### 最后测试，对了 cloudflare 会贴心的为你的 Tunnel 套上 ssl 证书，所以访问时用 https 哦。
