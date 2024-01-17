@@ -45,7 +45,6 @@ tree
 vim config.yml
 
 tunnel: xxxxxxx-1aa2-46fe-a4ef-5d6ba1b946c8
-credentials-file: /etc/cloudflared/415c7dbd-1aa2-46fe-a4ef-5d6ba1b946c8.json
 
 ingress:
   - hostname: www.mywebsite.com
@@ -61,7 +60,7 @@ ingress:
 ```shell
 # 创建子域名记录，如果有多个子域名，要执行多次。
 docker run -v $PWD/cloudflared:/etc/cloudflared erisamoe/cloudflared tunnel route dns xxxxxx-1aa2-46fe-a4ef-5d6ba1b946c8 nas.mywebsite.com
-# 验证记录
+# 验证配置文件
 docker run -v $PWD/cloudflared:/etc/cloudflared erisamoe/cloudflared tunnel ingress validate
 # 验证访问规则
 docker run -v $PWD/cloudflared:/etc/cloudflared erisamoe/cloudflared tunnel ingress rule https://nas.mywebsite.com
@@ -80,11 +79,11 @@ docker run -d --restart unless-stopped -v $PWD/cloudflared:/etc/cloudflared eris
 ### 最后测试，对了 cloudflare 会贴心的为你的 Tunnel 套上 ssl 证书，所以访问时用 https 哦。
 
 ```
-curl -v https://www.mywebsite.com
+curl -v https://nas.mywebsite.com
 ```
 
-### 参考
 
+### 参考
 
 https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/configure-tunnels/local-management/configuration-file/
 
