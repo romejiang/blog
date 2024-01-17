@@ -231,6 +231,9 @@ tar --exclude='wsserver/node_modules' -zcvf ./c.tar wsserver
 **Awk的用法**
 
 ```shell
+# 根据mac地址找到ip，然后去重
+ip neigh |grep '5c:e9:1e:b6:92:a4' | awk '{print $1}' | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" | awk '!a[$0]++'
+
 PORTS=`netstat -na|grep LISTEN| awk -v FS="[. ]+" '{print $(NF-4); }' | uniq | sort`
 
 # PORTS=`netstat -na|grep LISTEN| awk '{print $4}'|sed -e "s/::1./:/g" -e "s/*./:/g" -e "s/127.0.0.1./:/g" | uniq | sort`
