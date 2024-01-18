@@ -22,13 +22,13 @@ cloudflare 提供了免费的 Tunnel 产品，可以实现内网穿透的功能�
 ### 首先在有 docker 的环境运行以下命令，获得登录密钥文件。注意命令行输出，运行后会生成一个连接，复制链接到浏览器完成登录和授权。
 
 ```shell
-docker run -v $PWD/cloudflared:/.cloudflared erisamoe/cloudflared login
+docker run --rm -v $PWD/cloudflared:/.cloudflared cloudflare/cloudflared login
 ```
 
 ### 然后创建 Tunnel ，这里的 `mytunnel` 可以换成你喜欢的名字。 
 
 ```shell
-docker run -v $PWD/cloudflared:/etc/cloudflared erisamoe/cloudflared tunnel create mytunnel
+docker run --rm -v $PWD/cloudflared:/etc/cloudflared cloudflare/cloudflared tunnel create mytunnel
 ```
 
 ### 完成这两步后，会在当前目录创建一个文件夹 （cloudflared） 和两个文件。类似这样
@@ -59,11 +59,11 @@ ingress:
 
 ```shell
 # 创建子域名记录，如果有多个子域名，要执行多次。
-docker run -v $PWD/cloudflared:/etc/cloudflared erisamoe/cloudflared tunnel route dns xxxxxx-1aa2-46fe-a4ef-5d6ba1b946c8 nas.mywebsite.com
+docker run --rm -v $PWD/cloudflared:/etc/cloudflared cloudflare/cloudflared tunnel route dns xxxxxx-1aa2-46fe-a4ef-5d6ba1b946c8 nas.mywebsite.com
 # 验证配置文件
-docker run -v $PWD/cloudflared:/etc/cloudflared erisamoe/cloudflared tunnel ingress validate
+docker run --rm -v $PWD/cloudflared:/etc/cloudflared cloudflare/cloudflared tunnel ingress validate
 # 验证访问规则
-docker run -v $PWD/cloudflared:/etc/cloudflared erisamoe/cloudflared tunnel ingress rule https://nas.mywebsite.com
+docker run --rm -v $PWD/cloudflared:/etc/cloudflared cloudflare/cloudflared tunnel ingress rule https://nas.mywebsite.com
 
 ```
 
@@ -71,9 +71,9 @@ docker run -v $PWD/cloudflared:/etc/cloudflared erisamoe/cloudflared tunnel ingr
 
 ```shell
 # 测试启动
-docker run -v $PWD/cloudflared:/etc/cloudflared erisamoe/cloudflared tunnel run mytunnel
+docker run --rm -v $PWD/cloudflared:/etc/cloudflared cloudflare/cloudflared tunnel run mytunnel
 # 正式启动
-docker run -d --restart unless-stopped -v $PWD/cloudflared:/etc/cloudflared erisamoe/cloudflared tunnel run mytunnel
+docker run -d --restart unless-stopped -v $PWD/cloudflared:/etc/cloudflared cloudflare/cloudflared tunnel run mytunnel
 ```
 
 ### 最后测试，对了 cloudflare 会贴心的为你的 Tunnel 套上 ssl 证书，所以访问时用 https 哦。
@@ -89,5 +89,5 @@ https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/co
 
 https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-local-tunnel/
 
-https://hub.docker.com/r/erisamoe/cloudflared
+https://hub.docker.com/r/cloudflare/cloudflared
 
