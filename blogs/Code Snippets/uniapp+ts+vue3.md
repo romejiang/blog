@@ -19,7 +19,7 @@ npx degit romejiang/uni-preset-vue#vite-ts FinCRM
 pnpm i
 
 ## 安装常用库
-pnpm i pinia 
+pnpm i pinia@2.0.23
 pnpm i @vueuse/core
 pnpm i -D naive-ui
 

@@ -115,20 +115,21 @@ exports.download = async function (url, dist) {
 
 ## 支持 import 的导出
 ```js
+//  typescript
 export default () => {
   console.log('Hi from the default export!');
 };
-
-// OR
-
 export default user;
-
 export { success, fail }
+// OR
+// javascript
 
 exports.download = async function (url, dist)
-
 module.exports = {
   getSearch
+}
+module.exports = {
+    async index(ctx) {}
 }
 
 ```

@@ -43,3 +43,12 @@ reverse_proxy :9003
 
 
 ### caddy validate 测试配置文件是否有效
+
+
+```shell
+
+vim Caddyfile
+api.huixuanzuji.com
+reverse_proxy :3000
+
+```
