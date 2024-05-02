@@ -1,6 +1,6 @@
 +++
-date = 2024-05-03
-title = '完美部署FastGPT 本地化 embedding 和 reranker 模型'
+date = 2024-05-02
+title = '完美部署 FastGPT，本地化 embedding、reranker 模型'
 categories = ['ai']
 tags = [
     "ai",
