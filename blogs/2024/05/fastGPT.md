@@ -77,8 +77,17 @@ vim config.json
 docker compose down
 docker compose up -d
 
-# 有时添加模型后，网页端显示不出来，请强制刷新网页
 ```
+
+然后在oneapi里配置 bge-large 模型，之后在 fastgpt 后台创建新的知识库，就可以看到 bge-large 模型了。
+
+**有时添加模型后，网页端显示不出来，请强制刷新网页** 
+
+如果还不明白，请参考官方文档
+
+https://doc.fastai.site/docs/development/custom-models/m3e/
+
+
 
 ### 部署本地 rerank 模型
 
@@ -123,6 +132,8 @@ docker compose down
 docker compose up -d
 
 ```
+如果还不明白，请参考官方文档
+https://doc.fastai.site/docs/development/custom-models/bge-rerank/
 
 ### 修改 fastgpt 版本解决无法rerank的bug
 修改 fastgpt 版本为v4.7.1-alpha2
