@@ -42,7 +42,8 @@ vim docker-compose.yml
     environment:
       - sk-key=mytoken
 
-# 修改配置文件
+# 修改配置文件，bge-large 模型部分是新加的。
+
 vim config.json
 
 "vectorModels": [
@@ -70,6 +71,13 @@ vim config.json
       "queryConfig": {}
     }
   ],
+
+
+# 每次更新完配置或者yml都需要重启以下
+docker compose down
+docker compose up -d
+
+# 有时添加模型后，网页端显示不出来，请强制刷新网页
 ```
 
 ### 部署本地 rerank 模型
@@ -110,6 +118,10 @@ vim config.json
   }
 ]
 
+# 每次更新完配置或者yml都需要重启以下
+docker compose down
+docker compose up -d
+
 ```
 
 ### 修改 fastgpt 版本解决无法rerank的bug
@@ -120,6 +132,11 @@ vim docker-compose.yml
 
   image: registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt:v4.7.1-alpha2
   # image: registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt:v4.7 
+
+
+# 每次更新完配置或者yml都需要重启以下
+docker compose down
+docker compose up -d
 ```
 
 
@@ -162,5 +179,36 @@ vim docker-compose.yml
     #  - 5432:5432
     networks:
       - fastgpt
+
+
+# 每次更新完配置或者yml都需要重启以下
+docker compose down
+docker compose up -d
 ```
 
+### 几个模型的测试方法
+
+```shell
+docker run -d --name bge-large-api -p 6008:6008 jokerwho/bge-large-api:latest
+docker run -d --name m3e-large -p 6004:6008 stawky/m3e-large-api:latest
+
+
+curl --location --request POST 'http://127.0.0.1:6008/v1/embeddings' \
+--header 'Authorization: Bearer sk-aaabbbcccdddeeefffggghhhiiijjjkkk' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "model": "bge-large-zh-v1.5",
+  "input": ["目标：三个菜单栏，体验click、view、media_id 三种类型的菜单按钮，其他类型在本小节学习之后，自行请查询公众平台wiki说明领悟。"]
+}'
+
+curl --location --request POST 'http://127.0.0.1:6004/v1/embeddings' \
+--header 'Authorization: Bearer sk-aaabbbcccdddeeefffggghhhiiijjjkkk' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "model": "bge-large-zh-v1.5",
+  "input": ["目标：三个菜单栏，体验click、view、media_id 三种类型的菜单按钮，其他类型在本小节学习之后，自行请查询公众平台wiki说明领悟。"]
+}'
+
+
+
+```
