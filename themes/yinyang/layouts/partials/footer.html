@@ -7,4 +7,13 @@
   <!-- <div class="site-footer-item">
     <a href="https://github.com/joway/hugo-theme-yinyang" target="_blank">Theme</a>
   </div> -->
+  <!-- busuanzi -->
+  {{ if .Site.Params.busuanzi -}}
+  <span id="busuanzi_container_site_pv">
+    访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  <span id="busuanzi_container_site_uv">
+    访客数<span id="busuanzi_value_site_uv"></span>人次
+  </span>
+  {{- end -}}
 </div>
