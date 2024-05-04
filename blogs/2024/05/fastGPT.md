@@ -83,6 +83,10 @@ docker compose up -d
 
 **有时添加模型后，网页端显示不出来，请强制刷新网页** 
 
+也可以换 m3e-large 模型，只需要替换docker镜像为 `stawky/m3e-large-api:latest`。其他配置都一样。
+
+`bge-large` 和 `m3e-large` 都支持cpu运行，速度开发测试或小规模使用没问题。
+
 如果还不明白，请参考官方文档
 
 https://doc.fastai.site/docs/development/custom-models/m3e/
@@ -132,6 +136,9 @@ docker compose down
 docker compose up -d
 
 ```
+
+`bge-rerank-base` 模型支持CPU运行。
+
 如果还不明白，请参考官方文档
 https://doc.fastai.site/docs/development/custom-models/bge-rerank/
 
