@@ -9,7 +9,7 @@ tags = [
 +++
 
 
-## WSL 中安装 ssh
+## WSL 中启动 ssh 服务 
 ```shell
 sudo apt install openssh-server
 
