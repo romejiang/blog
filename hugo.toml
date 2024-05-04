@@ -8,6 +8,8 @@ googleAnalytics = "G-QYWXZN3NBX"
 
 [author]
   link = "https://romejiang.top"
+  homepage = "https://romejiang.top"
+  name = 'RomeJiang'
 
 [markup]
   [markup.goldmark]
@@ -34,6 +36,7 @@ googleAnalytics = "G-QYWXZN3NBX"
   ShowReadingTime= true
   ShowWordCount= true
   hasCJKLanguage= true
+  busuanzi=true
 
 [[params.socials]]
   name = "About Me"
@@ -44,8 +47,6 @@ link = "/categories/"
 [[params.socials]]
   name = "Github"
   link = "https://github.com/romejiang"
-[[params.busuanzi]]
-  enable= true   
 
 [module]
 [[module.mounts]]
