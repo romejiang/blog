@@ -21,27 +21,31 @@ googleAnalytics = "G-QYWXZN3NBX"
     
 
 [params]
-headTitle = "Rome Jiang's Blog"
-mainSections = ["posts"]
-twitterCards = true
-postHeaderContent = ""
-postFooterContent = "<br/><br/><p>Subscribe：<a target='_blank' href='https://mailchi.mp/a1a0d59e7a19/joway'>Romejiang's Blog</a></p>"
+  headTitle = "Rome Jiang's Blog"
+  mainSections = ["posts"]
+  twitterCards = true
+  postHeaderContent = ""
+  postFooterContent = "<br/><br/><p>Romejiang's Blog</p>"
 
-author.name = "romejiang"
-author.email = "Romejiang@gmail.com"
-homepage = "https://romejiang.top/"
-extraCSSFiles = ["css/index.css", "css/syntax-dark.css"]
+  author.name = "romejiang"
+  author.email = "Romejiang@gmail.com"
+  homepage = "https://romejiang.top/"
+  extraCSSFiles = ["css/index.css", "css/syntax-dark.css"]
+  ShowReadingTime= true
+  ShowWordCount= true
+  hasCJKLanguage= true
 
 [[params.socials]]
-name = "About Me"
-link = "/about"
+  name = "About Me"
+  link = "/about"
 [[params.socials]]
-name = "Tags"
+  name = "Tags"
 link = "/categories/"
 [[params.socials]]
-name = "Github"
-link = "https://github.com/romejiang"
-
+  name = "Github"
+  link = "https://github.com/romejiang"
+[[params.busuanzi]]
+  enable= true   
 
 [module]
 [[module.mounts]]
