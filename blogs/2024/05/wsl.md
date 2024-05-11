@@ -18,6 +18,7 @@ sudo vim /etc/ssh/sshd_config
 # 主要设置这两个参数
 Port 22
 PasswordAuthentication yes
+AllowUsers username
 
 # 然后启动ssh
 sudo systemctl start ssh # 开启ssh服务
@@ -46,7 +47,22 @@ windows默认只会将WSL的端口转发到local，所以在localhost上可以�
 在PowerShell中用管理员权限打开，执行下面的命令，将内网的22端口映射到0.0.0.0的2222端口。
 ```shell
 
-netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=2222 connectaddress=127.0.0.1 connectport=22
+# 添加端口转发
+netsh interface portproxy add v4tov4 listenport=2222 listenaddress=0.0.0.0 connectaddress=127.0.0.1 connectport=22
+
+netsh interface portproxy add v4tov4 listenport=2222 listenaddress=0.0.0.0 connectaddress=127.0.0.1 connectport=22
+
+
+
+# 删除端口转发
+netsh interface portproxy delete v4tov4 listenaddress=0.0.0.0 listenport=2222
+
+# 查看windows宿主机端口转发情况
+netsh interface portproxy show all
+
+# 开启windows防火墙端口规则
+netsh advfirewall firewall add rule name=WSL2 dir=in action=allow protocol=TCP localport=2222
+
 ```
 
 

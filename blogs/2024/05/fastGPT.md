@@ -11,7 +11,7 @@ tags = [
 ]
 +++
 
-### docker 部署
+### docker 部署 FastGPT
 
 ```shell
 curl -O https://raw.githubusercontent.com/labring/FastGPT/main/files/deploy/fastgpt/docker-compose.yml
@@ -157,6 +157,81 @@ docker compose down
 docker compose up -d
 ```
 
+
+### 白嫖 Nvidia的 llama3 和 deepseek 模型
+Nvidia访问下面地址，注册，然后在首页找到 llama3 70b模型点进去就可以生成key。
+https://build.nvidia.com/explore/discover
+
+DeepSeek 简直赛博菩萨，注册认证手机号送500万token。
+https://deepseek.com
+
+拿到key后，在 oneapi 中新建渠道，把 key 和 api url填进去。名字可以随便填。
+
+但模型名一定要符合平台的要求。用规范模型名。
+Nvidia: meta/llama3-70b-instruct
+
+deepseek:有两个模型，
+  deepseek-chat  // chat适合聊天做主模型，
+  deepseek-coder // coder使用编程分析，工具调用需要用这个
+
+最后一步是修改配置文件： config.json
+```json
+
+{
+      "model":"meta/llama3-70b-instruct",
+      "name": "llama3-70b",
+      "maxContext": 16000,
+      "avatar": "/imgs/model/huggingface.svg",
+      "maxResponse": 4000,
+      "quoteMaxToken": 13000,
+      "maxTemperature": 1.2,
+      "charsPointsPrice": 0,
+      "censor": false,
+      "vision": false,
+      "datasetProcess": true,
+      "usedInClassify": true,
+      "usedInExtractFields": true,
+      "usedInToolCall": true,
+      "usedInQueryExtension": true,
+      "toolChoice": false,
+      "functionCall": false,
+      "customCQPrompt": "",
+      "customExtractPrompt": "",
+      "defaultSystemChatPrompt": "",
+      "defaultConfig": {
+          "temperature": 0.5,
+        "max_tokens": 2048
+      }
+    },
+    {
+  "model":"deepseek-coder",
+  "name" :  "deepseek" ,
+  "maxContext" : 16000,
+  "avatar" :  "/imgs/model/huggingface.svg" ,
+  "maxResponse" : 16000,
+  "quoteMaxToken" : 13000,
+  "maxTemperature" : 1.2,
+  "charsPointsPrice" : 0,
+  "censor" : false,
+  "vision" : false,
+  "datasetProcess" : true,
+  "usedInClassify" : true,
+  "usedInExtractFields" : true,
+  "usedInToolCall" : true,
+  "usedInQueryExtension" : true,
+  "toolChoice" : false,
+  "functionCall" : false,
+  "customCQPrompt" : "",
+  "customExtractPrompt" : "",
+  "defaultSystemChatPrompt" : "",
+  "defaultConfig" : {
+    "temperature" : 0.0,
+    "max_tokens" : 2048
+  }
+},
+
+
+```
 
 
 ### 修复 postgres 日志报错信息
