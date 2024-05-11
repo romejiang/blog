@@ -230,6 +230,12 @@ deepseek:有两个模型，
   }
 },
 
+```
+
+```shell
+# 每次更新完配置或者yml都需要重启以下
+docker compose down
+docker compose up -d
 
 ```
 
