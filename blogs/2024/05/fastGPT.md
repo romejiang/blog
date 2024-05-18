@@ -142,7 +142,10 @@ docker compose up -d
 如果还不明白，请参考官方文档
 https://doc.fastai.site/docs/development/custom-models/bge-rerank/
 
-### 修改 fastgpt 版本解决无法rerank的bug
+### ~~修改 fastgpt 版本解决无法rerank的bug~~
+
+*** 现在已经默认4.8版了，修复了这个问题 ***
+
 修改 fastgpt 版本为v4.7.1-alpha2
 ```shell
 # 修改docker镜像版本号
