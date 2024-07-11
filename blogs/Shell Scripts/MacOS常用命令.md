@@ -277,6 +277,7 @@ grep -Rn --exclude=*.map 'registerCommand' .
 
 grep -Rnw "jQuery.loading.hide()" .
 
+find . -name "*.xml" | xargs grep -n --color=auto "aspose"
 find . -name "*.php" | xargs grep -n --color=auto "select"
 
 find . -name "*.json" | xargs grep -n --color=auto "Ho9wh6gCEkQ3cULpiabG7Bxost49E"

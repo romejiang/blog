@@ -52,3 +52,21 @@ api.huixuanzuji.com
 reverse_proxy :3000
 
 ```
+### 转发多个域名
+Caddyfile
+
+caddy start
+caddy reload
+```yaml
+api.huixuanzuji.com {
+	reverse_proxy :3000
+}
+
+api2.huixuanzuji.com {
+	reverse_proxy :3001
+}
+
+app2.huixuanzuji.com {
+	reverse_proxy :3002
+}
+```
