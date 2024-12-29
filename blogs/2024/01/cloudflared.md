@@ -22,7 +22,7 @@ cloudflare 提供了免费的 Tunnel 产品，可以实现内网穿透的功能�
 ### 首先在有 docker 的环境运行以下命令，获得登录密钥文件。注意命令行输出，运行后会生成一个连接，复制链接到浏览器完成登录和授权。
 
 ```shell
-docker run --rm -v $PWD/cloudflared:/.cloudflared cloudflare/cloudflared login
+docker run --rm -v $PWD/cloudflared:/home/nonroot/.cloudflared cloudflare/cloudflared login
 ```
 
 ### 然后创建 Tunnel ，这里的 `mytunnel` 可以换成你喜欢的名字。 

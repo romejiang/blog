@@ -1,6 +1,6 @@
 +++
 date = 2019-12-28
-title = 'BTCPay Server 安装配置'
+title = '通过 openai whisper 模型生成字幕'
 publishDate = '2050-01-01'
 categories = ['devops']
 tags = [
@@ -16,8 +16,15 @@ tags = [
 # 通过 openai whisper 模型生成字幕
 
 ```shell
+# m-bain/whisperX
+subsai /Users/stephen/Movies/JAV/91-0402.mp4 -m openai/whisper -df ./w -f '.ass' 
+subsai /Users/stephen/Movies/JAV/91-0402.mp4 -m guillaumekln/faster-whisper -df ./fw -f '.ass' 
+subsai /Users/stephen/Movies/JAV/91-0402.mp4 -m m-bain/whisperX -df ./wx --format '.ass' 
+
+
 # 自动生成字幕
-subsai /Users/stephen/Movies/douyin/1.mp4 --model openai/whisper --model-configs '{"model_type": "small"}' --format srt
+subsai /Users/stephen/Movies/JAV/91-0402.mp4 --model openai/whisper --model-configs '{"model_type": "small"}' --format srt
+
 
 # 指定字幕语言
 subsai ./assets/test1.mp4 --model openai/whisper --model-configs '{"language": "fr"}' --format srt 

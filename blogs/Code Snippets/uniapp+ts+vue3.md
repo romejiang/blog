@@ -20,7 +20,8 @@ pnpm i
 ## 安装常用库
 pnpm i pinia@2.0.23
 pnpm i @vueuse/core
-pnpm i -D naive-ui
+<!-- 不能用 -->
+<!-- pnpm i -D naive-ui -->
 
 ## 安装 uni-ui 的依赖
 pnpm i sass sass-loader@10.1.1 -D

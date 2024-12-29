@@ -28,15 +28,15 @@ source ~/.bashrc
 
 ```bash
 alias s='screen'
-
+# 列表
 s -ls
-
+# 开启新的
 s -S name
-
+# 加入现有的
 s -r name
-
+# 从当前推出
 control + a / d
-
+# 结束现有的
 s -X -S name quit
 ```
 

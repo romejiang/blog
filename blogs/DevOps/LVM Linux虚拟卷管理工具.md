@@ -103,6 +103,27 @@ lvextend -L +1G /dev/pve/root
 
 resize2fs  /dev/pve/root
 
+### 一个实际案例
+
+```shell
+fdisk -l
+pvs
+vgs
+lvs
+df -h
+fdisk /dev/vda
+fdisk -l
+pvcreate /dev/vda4
+vgs
+vgextend ubuntu-vg /dev/vda4
+lvs
+vgs
+df -h
+lvextend -L +69G /dev/mapper/ubuntu--vg-ubuntu--lv
+resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+
+```
+
 ### **其他**
 
 如果是xfs 文件系统，需要使用 xfs_growfs  代替  resize2fs 扩容
@@ -114,6 +135,7 @@ partprobe
 查看虚拟卷详情
 
 lvs -a -o name,size,chunk_size
+
 
 ### **参考**
 

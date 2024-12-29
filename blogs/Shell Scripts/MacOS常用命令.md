@@ -301,6 +301,26 @@ docker system prune
 
 docker system df -v
 ```
+
+**docker 访问宿主主机**
+
+```shell
+# Macos windows 默认支持
+host.docker.internal
+
+# linux 需要加参数
+
+--add-host="host.docker.internal:host-gateway"
+
+# compose 文件
+extra_hosts:
+  - 'host.docker.internal:host-gateway'
+
+```
+
+** docker好用的网络工具 **
+
+jonlabelle/network-tools
 =====================================
 
 **git一些不常用命令**
